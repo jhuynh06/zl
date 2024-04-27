@@ -161,9 +161,9 @@ body {
     opacity: 1;
     width: 118px;
     height: 126px;
-    background-color: white;
-    background-image: null;
-    background-size: cover;
+    object-fit: cover;
+    background-image: url();
+    background-size: 100% 100%;
     z-index: 150;
     border-radius: 0px;
     font-weight: 200;
@@ -171,11 +171,6 @@ body {
     left: -1px;
     color: black;
     transition: 0.3s all;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -moz-flex;
-    display: -ms-flexbox;
     display: flex;
   
     -webkit-box-pack: center;

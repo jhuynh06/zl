@@ -245,7 +245,7 @@ window.onload = function() {
       }
     }
     if (count == 16) {
-      document.getElementById('status').className = 'won';
+      document.getElementById('status').className = 'lose';
     } else if (document.getElementsByClassName('grid').id == 'moved'){ 
       cellCreator(1, 1); 
     }
@@ -264,21 +264,21 @@ window.onload = function() {
   /* ----- STYLE ----- */
   function colorSet(value, tile) {
     switch(value) {
-      case 2:    tile.style.backgroundImage = "url(2048_images/3077443.png)"; tile.style.color = 'transparent'; break;
-      case 4:    tile.style.background = '#ecefc6'; tile.style.color = 'black'; break;
-      case 8:    tile.style.background = '#ffb296'; tile.style.color = 'black'; break;
-      case 16:   tile.style.background = '#ff7373'; tile.style.color = 'black'; break;
-      case 32:   tile.style.background = '#f6546a'; tile.style.color = 'white'; break;
-      case 64:   tile.style.background = '#8b0000'; tile.style.color = 'white'; break;
-      case 128:  tile.style.background = '#794044'; tile.style.color = 'white'; 
+      case 2:    tile.style.backgroundImage = "url(2048_images/dinosaur.jpg"; tile.style.color = 'transparent'; break;
+      case 4:    tile.style.backgroundImage = 'url(2048_images/quoth.jpg'; tile.style.color = 'transparent'; break;
+      case 8:    tile.style.backgroundImage = 'url(2048_images/ducke.jpg'; tile.style.color = 'transparent'; break;
+      case 16:   tile.style.backgroundImage = 'url(2048_images/penguins.jpg'; tile.style.color = 'transparent'; break;
+      case 32:   tile.style.background = 'url(2048_images/angrycat.jpg'; tile.style.color = 'transparent'; break;
+      case 64:   tile.style.background = 'url(2048_images/catonback.jpg'; tile.style.color = 'transparent'; break;
+      case 128:  tile.style.background = 'url(2048_images/catchoke.jpg'; tile.style.color = 'transparent'; 
+                 tile.style.fontSize = 'url(2048_images/catgrab.jpg'; break;
+      case 256:  tile.style.background = 'url(2048_images/demoncat.jpg'; tile.style.color = 'transparent';
                  tile.style.fontSize = '50px'; break;
-      case 256:  tile.style.background = '#31698a'; tile.style.color = 'white';
+      case 512:  tile.style.background = 'url(2048_images/cutecatclose.jpg'; tile.style.color = 'transparent';
                  tile.style.fontSize = '50px'; break;
-      case 512:  tile.style.background = '#297A76'; tile.style.color = 'white';
-                 tile.style.fontSize = '50px'; break;
-      case 1024: tile.style.background = '#2D8A68'; tile.style.color = 'white';
+      case 1024: tile.style.background = 'url(2048_images/catlayback.jpg'; tile.style.color = 'transparent';
                  tile.style.fontSize = '40px'; break;
-      case 2048: tile.style.background = '#1C9F4E'; tile.style.color = 'white'; 
+      case 2048: tile.style.background = 'url(2048_images/lazycat.jpg'; tile.style.color = 'transparent'; 
                  tile.style.fontSize = '40px'; 
                  document.getElementById('status').className = 'won'; break;
     }
