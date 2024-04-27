@@ -245,7 +245,7 @@ window.onload = function() {
       }
     }
     if (count == 16) {
-      document.getElementById('status').className = 'lose';
+      document.location.href = 'final.html';
     } else if (document.getElementsByClassName('grid').id == 'moved'){ 
       cellCreator(1, 1); 
     }
@@ -280,7 +280,7 @@ window.onload = function() {
                  tile.style.fontSize = '40px'; break;
       case 2048: tile.style.background = 'url(2048_images/lazycat.jpg'; tile.style.color = 'transparent'; 
                  tile.style.fontSize = '40px'; 
-                 document.getElementById('status').className = 'won'; break;
+                 document.location.href = 'final.html'; break;
     }
                       
   }
