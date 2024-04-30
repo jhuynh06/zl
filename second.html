@@ -133,18 +133,6 @@
           { value: wave1 },
       ],
       });
-      anime({
-        targets: '#turtle > path',
-        easing: 'linear',
-        duration: 7500,
-        loop: true,
-        d: [
-          {value: [wave1, wave2]},
-          {value: wave3},
-          {value: wave4},
-          {value: wave1},
-        ],
-      });
       document.getElementById("wrapper").style.backgroundColor = '#091756';
       var app = document.getElementById('text');
       var typewriter = new Typewriter(app, {
