@@ -112,3 +112,15 @@ body{
     top: -5%;
     left: 40%;
 }
+#flushed {
+    position: absolute;
+    z-index: 3;
+    top: 20%;
+    left: 40%;
+    display: none;
+}
+#flowers {
+    position: absolute;
+    z-index: 4;
+    display: none;
+}

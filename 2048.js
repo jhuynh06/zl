@@ -245,7 +245,7 @@ window.onload = function() {
       }
     }
     if (count == 16) {
-      document.location.href = 'final.html';
+      setTimeout(changeScreen, 5000);
     } else if (document.getElementsByClassName('grid').id == 'moved'){ 
       cellCreator(1, 1); 
     }
@@ -264,27 +264,29 @@ window.onload = function() {
   /* ----- STYLE ----- */
   function colorSet(value, tile) {
     switch(value) {
-      case 2:    tile.style.backgroundImage = "url(2048_images/dinosaur.jpg"; tile.style.color = 'transparent'; break;
-      case 4:    tile.style.backgroundImage = 'url(2048_images/quoth.jpg'; tile.style.color = 'transparent'; break;
-      case 8:    tile.style.backgroundImage = 'url(2048_images/ducke.jpg'; tile.style.color = 'transparent'; break;
-      case 16:   tile.style.backgroundImage = 'url(2048_images/penguins.jpg'; tile.style.color = 'transparent'; break;
-      case 32:   tile.style.background = 'url(2048_images/angrycat.jpg'; tile.style.color = 'transparent'; break;
-      case 64:   tile.style.background = 'url(2048_images/catonback.jpg'; tile.style.color = 'transparent'; break;
-      case 128:  tile.style.background = 'url(2048_images/catchoke.jpg'; tile.style.color = 'transparent'; 
+      case 2:    tile.style.backgroundImage = "url(2048_images/dinosaur.jpg"; tile.style.color = 'white'; break;
+      case 4:    tile.style.backgroundImage = 'url(2048_images/quoth.jpg'; tile.style.color = 'black'; break;
+      case 8:    tile.style.backgroundImage = 'url(2048_images/ducke.jpg'; tile.style.color = 'black'; break;
+      case 16:   tile.style.backgroundImage = 'url(2048_images/penguins.jpg'; tile.style.color = 'white'; break;
+      case 32:   tile.style.background = 'url(2048_images/angrycat.jpg'; tile.style.color = 'black'; break;
+      case 64:   tile.style.background = 'url(2048_images/catonback.jpg'; tile.style.color = 'black'; break;
+      case 128:  tile.style.background = 'url(2048_images/catchoke.jpg'; tile.style.color = 'black'; 
                  tile.style.fontSize = 'url(2048_images/catgrab.jpg'; break;
-      case 256:  tile.style.background = 'url(2048_images/demoncat.jpg'; tile.style.color = 'transparent';
+      case 256:  tile.style.background = 'url(2048_images/demoncat.jpg'; tile.style.color = 'black';
                  tile.style.fontSize = '50px'; break;
-      case 512:  tile.style.background = 'url(2048_images/cutecatclose.jpg'; tile.style.color = 'transparent';
+      case 512:  tile.style.background = 'url(2048_images/cutecatclose.jpg'; tile.style.color = 'black';
                  tile.style.fontSize = '50px'; break;
-      case 1024: tile.style.background = 'url(2048_images/catlayback.jpg'; tile.style.color = 'transparent';
+      case 1024: tile.style.background = 'url(2048_images/catlayback.jpg'; tile.style.color = 'black';
                  tile.style.fontSize = '40px'; break;
-      case 2048: tile.style.background = 'url(2048_images/lazycat.jpg'; tile.style.color = 'transparent'; 
+      case 2048: tile.style.background = 'url(2048_images/lazycat.jpg'; tile.style.color = 'black'; 
                  tile.style.fontSize = '40px'; 
-                 document.location.href = 'final.html'; break;
+                 setTimeout(changeScreen, 5000); break;
     }
                       
   }
-  
+  function changeScreen() {
+    document.location.href = 'final.html';
+  }
   function info() {
     setTimeout(function() {
       document.getElementById('description').classList.toggle('show');

@@ -2,7 +2,7 @@
 window.onload = function() {
     wave();
     typing();
-    setTimeout(showButton, 2000);
+    setTimeout(showButton, 2610);
 }
 
 function wave() {
@@ -41,11 +41,21 @@ function showButton() {
 }
 function yes() {
     clearText();
+    document.getElementById('flushed').style.display = "block";
+    document.getElementById('wrapper').style.background = "white";
+    document.getElementById('flowers').style.display = "block";
+    document.body.style.background = "white";
 }
 function no() {
     clearText();
     document.getElementById('turtleonrope').style.display= "block";
     blackmailTurtle();
+    setTimeout(reshow, 5000);
+}
+function reshow() {
+    document.getElementById('text').style.display = "block";
+    document.getElementById('turtleonrope').style.display = "none";
+    showButton();
 }
 function blackmailTurtle() {
 
