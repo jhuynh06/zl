@@ -1,8 +1,12 @@
-
+const lines = ['hey zoey, could you be my darling at prom?', 'zoey, would you be willing to go to prom with me?', 'zoey, could we make our scents linger together at prom?', 'zoey, i really think its our calling to go together', 'could we begin the telling of our story at prom, zoey?', 'zoey, is it possible that my feelings reach yours?'];
+const app = document.getElementById('text');
+const typewriter = new Typewriter(app, {
+  delay: 75,
+});
 window.onload = function() {
     wave();
     typing();
-    setTimeout(showButton, 2610);
+    setTimeout(showButton, 4000);
 }
 
 function wave() {
@@ -26,11 +30,10 @@ function wave() {
 }
 
 function typing() {
-    var app = document.getElementById('text');
-    var typewriter = new Typewriter(app, {
-      delay: 75,
-    });
-    typewriter.typeString('hey will you go to prom with me?').start();
+    typewriter.typeString(lines[0]).start();
+}
+function newText() {
+    typewriter.deleteAll().typeString(lines[Math.floor(Math.random() * lines.length)]).start();
 }
 function click() {
     console.log('1');
@@ -54,6 +57,7 @@ function no() {
 }
 function reshow() {
     document.getElementById('text').style.display = "block";
+    newText();
     document.getElementById('turtleonrope').style.display = "none";
     showButton();
 }
